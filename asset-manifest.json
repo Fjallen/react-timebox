@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Fjallen/react-timebox/static/css/main.8d35de53.chunk.css",
-    "main.js": "/Fjallen/react-timebox/static/js/main.c1154c05.chunk.js",
-    "main.js.map": "/Fjallen/react-timebox/static/js/main.c1154c05.chunk.js.map",
-    "runtime-main.js": "/Fjallen/react-timebox/static/js/runtime-main.5f76311d.js",
-    "runtime-main.js.map": "/Fjallen/react-timebox/static/js/runtime-main.5f76311d.js.map",
-    "static/js/2.665e99d5.chunk.js": "/Fjallen/react-timebox/static/js/2.665e99d5.chunk.js",
-    "static/js/2.665e99d5.chunk.js.map": "/Fjallen/react-timebox/static/js/2.665e99d5.chunk.js.map",
-    "index.html": "/Fjallen/react-timebox/index.html",
-    "precache-manifest.9539adac1ca576962abe32d832dc50c6.js": "/Fjallen/react-timebox/precache-manifest.9539adac1ca576962abe32d832dc50c6.js",
-    "service-worker.js": "/Fjallen/react-timebox/service-worker.js",
-    "static/css/main.8d35de53.chunk.css.map": "/Fjallen/react-timebox/static/css/main.8d35de53.chunk.css.map",
-    "static/media/Recording.mp3": "/Fjallen/react-timebox/static/media/Recording.07d1db13.mp3"
+    "main.css": "/react-timebox/static/css/main.8d35de53.chunk.css",
+    "main.js": "/react-timebox/static/js/main.660bf5f7.chunk.js",
+    "main.js.map": "/react-timebox/static/js/main.660bf5f7.chunk.js.map",
+    "runtime-main.js": "/react-timebox/static/js/runtime-main.b65994d8.js",
+    "runtime-main.js.map": "/react-timebox/static/js/runtime-main.b65994d8.js.map",
+    "static/js/2.665e99d5.chunk.js": "/react-timebox/static/js/2.665e99d5.chunk.js",
+    "static/js/2.665e99d5.chunk.js.map": "/react-timebox/static/js/2.665e99d5.chunk.js.map",
+    "index.html": "/react-timebox/index.html",
+    "precache-manifest.de62f2f6b05a139a12a01814d2b9eb9b.js": "/react-timebox/precache-manifest.de62f2f6b05a139a12a01814d2b9eb9b.js",
+    "service-worker.js": "/react-timebox/service-worker.js",
+    "static/css/main.8d35de53.chunk.css.map": "/react-timebox/static/css/main.8d35de53.chunk.css.map",
+    "static/media/Recording.mp3": "/react-timebox/static/media/Recording.07d1db13.mp3"
   },
   "entrypoints": [
-    "static/js/runtime-main.5f76311d.js",
+    "static/js/runtime-main.b65994d8.js",
     "static/js/2.665e99d5.chunk.js",
     "static/css/main.8d35de53.chunk.css",
-    "static/js/main.c1154c05.chunk.js"
+    "static/js/main.660bf5f7.chunk.js"
   ]
 }
