@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Fjallen/react-timebox/static/css/main.8d35de53.chunk.css",
+    "main.js": "/Fjallen/react-timebox/static/js/main.c1154c05.chunk.js",
+    "main.js.map": "/Fjallen/react-timebox/static/js/main.c1154c05.chunk.js.map",
+    "runtime-main.js": "/Fjallen/react-timebox/static/js/runtime-main.5f76311d.js",
+    "runtime-main.js.map": "/Fjallen/react-timebox/static/js/runtime-main.5f76311d.js.map",
+    "static/js/2.665e99d5.chunk.js": "/Fjallen/react-timebox/static/js/2.665e99d5.chunk.js",
+    "static/js/2.665e99d5.chunk.js.map": "/Fjallen/react-timebox/static/js/2.665e99d5.chunk.js.map",
+    "index.html": "/Fjallen/react-timebox/index.html",
+    "precache-manifest.9539adac1ca576962abe32d832dc50c6.js": "/Fjallen/react-timebox/precache-manifest.9539adac1ca576962abe32d832dc50c6.js",
+    "service-worker.js": "/Fjallen/react-timebox/service-worker.js",
+    "static/css/main.8d35de53.chunk.css.map": "/Fjallen/react-timebox/static/css/main.8d35de53.chunk.css.map",
+    "static/media/Recording.mp3": "/Fjallen/react-timebox/static/media/Recording.07d1db13.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5f76311d.js",
+    "static/js/2.665e99d5.chunk.js",
+    "static/css/main.8d35de53.chunk.css",
+    "static/js/main.c1154c05.chunk.js"
+  ]
+}
