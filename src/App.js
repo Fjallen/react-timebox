@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
 import Timer from "./components/Timer"
-import UIfx from 'uifx';
 import MyVoice from "./sounds/Recording.mp3";
 
 class App extends Component {
@@ -25,14 +24,22 @@ class App extends Component {
     this.handleDoingChange = this.handleDoingChange.bind(this);
     this.handleYes = this.handleYes.bind(this);
     this.handleNo = this.handleNo.bind(this);
-    this.beep = new UIfx(MyVoice);
+    this.beep = new Audio(MyVoice)
+  }
+  componentDidMount(){
+    this.beep.load();
+  }
+  componentWillUnmount(){
+    clearInterval(this.timerRef)
   }
   handleYes(){
+    clearInterval(this.timerRef)
     this.setState({
       minute:10
     })
   }
   handleNo(){
+    clearInterval(this.timerRef)
     this.setState({
       minute:10
     })
@@ -48,7 +55,14 @@ class App extends Component {
     })
   }
   playSound(){
-    this.beep.play();
+    const soundPromise = this.beep.play();
+    if (soundPromise !== undefined){
+      soundPromise.then(e=>{
+        console.log("Timer Done")
+      }).catch(err=>{
+        console.log(err)
+      })
+    }
   }
 
   handleMinuteChange(event) {
@@ -58,7 +72,7 @@ class App extends Component {
   };
 
   countSeconds() {
-    if (this.state.seconds ==0 && this.state.minutes ==0 && this.state.hours==0){
+    if (this.state.seconds ===0 && this.state.minutes ===0 && this.state.hours===0){
       this.playSound();
       this.setState({
         completeTimer:true
@@ -92,7 +106,7 @@ class App extends Component {
     }
   }
   countHours(){
-    if (this.state.minutes > 0){
+    if (this.state.hours > 0){
       this.setState({
         hours: this.state.hours -1
       })
@@ -100,7 +114,7 @@ class App extends Component {
   }
 
   startCountDown() {
-    setInterval(this.countSeconds, 1000);
+    this.timerRef = setInterval(this.countSeconds, 1000);
     this.setState({
       clicked : true
     })
