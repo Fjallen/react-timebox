@@ -124,7 +124,7 @@ class App extends Component {
   render() {
     if (!this.state.completeTimer){
       return (
-        <div>
+        <div class="background">
             {!this.state.clicked &&
               <div id="input-form">
                 <h1>How long will you work?</h1>
@@ -150,7 +150,7 @@ class App extends Component {
     }
     else{
       return (
-        <div id="timer-done">
+        <div id="timer-done" class="background">
           <h1>Did you finish what your task?</h1>
           <Button variant="contained" color="primary" onClick={this.handleYes}>Yes</Button>
           <Button variant="contained" color="secondary" onClick={this.handleNo}>No</Button>

@@ -13,3 +13,14 @@
 #timer-done{
     text-align: center;
 }
+.background{
+    background-color: aquamarine;
+    margin: 0px;
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 15%;
+}
+
+h1{
+    margin-top: 0px;
+}
