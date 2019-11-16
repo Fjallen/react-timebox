@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import Timer from "./components/Timer"
 import MyVoice from "./sounds/Recording.mp3";
+import Button from '@material-ui/core/Button';
 
 class App extends Component {
   constructor(props) {
@@ -72,7 +73,7 @@ class App extends Component {
   };
 
   countSeconds() {
-    if (this.state.seconds ===0 && this.state.minutes ===0 && this.state.hours===0){
+    if (this.state.seconds ==0 && this.state.minutes ==0 && this.state.hours==0){
       this.playSound();
       this.setState({
         completeTimer:true
@@ -149,10 +150,10 @@ class App extends Component {
     }
     else{
       return (
-        <div>
+        <div id="timer-done">
           <h1>Did you finish what your task?</h1>
-          <button onClick={this.handleYes}>Yes</button>
-          <button onClick={this.handleNo}>No</button>
+          <Button variant="contained" color="primary" onClick={this.handleYes}>Yes</Button>
+          <Button variant="contained" color="secondary" onClick={this.handleNo}>No</Button>
         </div>
       )
     }
