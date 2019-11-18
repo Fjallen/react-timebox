@@ -3,6 +3,7 @@ import './App.css';
 import Timer from "./components/Timer"
 import MyVoice from "./sounds/Recording.mp3";
 import Button from '@material-ui/core/Button';
+import axios from 'axios';
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +26,13 @@ class App extends Component {
     this.handleDoingChange = this.handleDoingChange.bind(this);
     this.handleYes = this.handleYes.bind(this);
     this.handleNo = this.handleNo.bind(this);
-    this.beep = new Audio(MyVoice)
+    this.beep = new Audio(MyVoice);
+    this.setResult = this.setResult.bind(this);
+  }
+  setResult(result){
+    var currentStorage = JSON.parse(localStorage.getItem("boxes"))
+    currentStorage.push(result)
+    localStorage.setItem("boxes", JSON.stringify(currentStorage))
   }
   componentDidMount(){
     this.beep.load();
@@ -38,12 +45,14 @@ class App extends Component {
     this.setState({
       minute:10
     })
+    this.setResult("yes")
   }
   handleNo(){
     clearInterval(this.timerRef)
     this.setState({
       minute:10
     })
+    this.setResult("no")
   }
   handleDoingChange(event){
     this.setState({
