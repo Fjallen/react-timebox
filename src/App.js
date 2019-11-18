@@ -44,9 +44,14 @@ class App extends Component {
     })
   }
   setResult(result){
-    var currentStorage = JSON.parse(localStorage.getItem("boxes"))
-    currentStorage.push(result)
-    localStorage.setItem("boxes", JSON.stringify(currentStorage))
+    if (localStorage.getItem("boxes")){
+      var currentStorage = JSON.parse(localStorage.getItem("boxes"))
+      currentStorage.push(result)
+      localStorage.setItem("boxes", JSON.stringify(currentStorage))
+    }
+    else{
+      localStorage.setItem("boxes", {result})
+    }
   }
   componentDidMount(){
     this.beep.load();
