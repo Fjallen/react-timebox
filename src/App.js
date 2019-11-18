@@ -14,7 +14,8 @@ class App extends Component {
       minutes:10,
       clicked : false,
       doing:"",
-      completeTimer: false
+      completeTimer: false,
+      quote:""
     }
     this.handleMinuteChange = this.handleMinuteChange.bind(this);
     this.handleHoursChange=this.handleHoursChange.bind(this);
@@ -28,6 +29,19 @@ class App extends Component {
     this.handleNo = this.handleNo.bind(this);
     this.beep = new Audio(MyVoice);
     this.setResult = this.setResult.bind(this);
+    this.getQuote = this.getQuote.bind(this);
+  }
+  getQuote(){
+    axios.get('https://random-word-api.herokuapp.com/word?key=Y9JNN9XW&number=5')
+    .then((res)=>{
+      let quote = res.data.join(" ")
+      this.setState({
+        quote:quote
+      })
+    })
+    .catch(err=>{
+      console.log(err)
+    })
   }
   setResult(result){
     var currentStorage = JSON.parse(localStorage.getItem("boxes"))
@@ -36,6 +50,7 @@ class App extends Component {
   }
   componentDidMount(){
     this.beep.load();
+    this.getQuote();
   }
   componentWillUnmount(){
     clearInterval(this.timerRef)
@@ -133,7 +148,7 @@ class App extends Component {
   render() {
     if (!this.state.completeTimer){
       return (
-        <div class="background">
+        <div className="background">
             {!this.state.clicked &&
               <div id="input-form">
                 <h1>How long will you work?</h1>
@@ -146,6 +161,7 @@ class App extends Component {
             {this.state.clicked &&
             <div id="good-luck">
               <h1>Good luck with {this.state.doing}</h1>
+              <h1>Confucious once said: {this.state.quote}</h1>
             </div>
             }
             <Timer hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds} />
