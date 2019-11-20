@@ -50,7 +50,7 @@ class App extends Component {
       localStorage.setItem("boxes", JSON.stringify(currentStorage))
     }
     else{
-      localStorage.setItem("boxes", {result})
+      localStorage.setItem("boxes", JSON.stringify(result))
     }
   }
   componentDidMount(){
